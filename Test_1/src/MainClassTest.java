@@ -15,5 +15,20 @@ public class MainClassTest extends MainClass {
         int classNumber = this.getClassNumber();
         Assert.assertTrue("Test fail: classNumber less then 45",classNumber > 45);
     }
+
+    @Test
+    public void testGetClassString(){
+        String substring = this.getClass_string();
+
+        if (substring.indexOf("Hello") >= 0){
+            //System.out.println("Hello");
+        }
+        else if(substring.indexOf("hello") >= 0){
+            //System.out.println("hello");
+        }
+        else{
+            Assert.fail("Can not find substrings 'Hello' or 'hello' in class_string.");
+        }
+    }
 }
 
